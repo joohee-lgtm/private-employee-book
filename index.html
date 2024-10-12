@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./users.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+    <title>직원목록</title>
+    <script undefined src="./assets/index-D92oL-VF.js"></script>
+    <link rel="stylesheet" href="./assets/index-kELkwnBz.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="tree"></div>
+  <form class="search">
+    <div class="count">
+      <span >총</span>
+      <span class="total"></span>
+      <span>건</span>
+    </div>
+    <input>
+    <button>검색</button>
+    
+  </form>
+  
+    <ul class="user"></ul>
+    <div class="dimmed">
+    </div>
+
+
+    <template id="alert_template">
+      <div class="alert" data-action-root="alert" >
+        <h3 class="title">{{title}}</h3>
+        <p class="message">{{message}}</p>
+        <button class="confirm">{{confirmLabel}}</button>
+      </div>
+    </template>
+
+    <template id="tree_node_template">
+      <div class="tree_item" data-action-root="node" data-tree-path="{{path}}">
+        <p class="field">
+          <span class="action {{actionWrapClass}}">
+            <button class="toggle"></button>
+        </span>
+        <span>{{name}}</span>
+        </p>
+        <div class="child">{{children}}</div>
+      </div>
+    </template>
+
+    <template id="user_card_template">
+      <li class="user_item" data-action-root="user" data-id="{{id}}">
+        <p class="depart">
+          <span>{{departmentNamePath}}</span>
+          <button></button>
+        </p>
+        <p class="personal">
+          <span class="duty" data-code="{{dutyCode}}">{{dutyName}}</span>
+          <span class="name">{{name}}</span>
+          <span class="en_name">{{enName}}</span>
+        </p>
+        <p class="contact">
+           <span class="tel">{{telephoneNumber}}</span>
+           <span class="email">{{email}}</span>
+        </p>
+      </li>
+    </template>
+  </body>
+</html>
